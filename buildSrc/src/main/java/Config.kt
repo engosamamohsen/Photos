@@ -34,8 +34,8 @@ object Config {
 
   object Environments {
     const val roomDb = "\"paymob_db\""
-    const val debugBaseUrl = "\"https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&format=json&nojsoncallback=1\""
-    const val releaseBaseUrl = "\"https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&format=json&nojsoncallback=1\""
+    const val debugBaseUrl = "\"https://www.flickr.com/\""
+    const val releaseBaseUrl = "\"https://www.flickr.com/\""
     const val API_KEY = "\"af5f7ee63f56f8b3e3323d5621d0ef07\""
   }
 }

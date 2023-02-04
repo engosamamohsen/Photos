@@ -14,9 +14,9 @@
     android:id="@+id/progress"
     android:layout_width="@dimen/dimen50"
     android:layout_height="@dimen/dimen50"
-    app:layout_constraintBottom_toBottomOf="@+id/image_movie"
-    app:layout_constraintEnd_toEndOf="@+id/image_movie"
-    app:layout_constraintStart_toStartOf="@+id/image_movie"
-    app:layout_constraintTop_toTopOf="@+id/image_movie" />
+    app:layout_constraintBottom_toBottomOf="@+id/image_photo"
+    app:layout_constraintEnd_toEndOf="@+id/image_photo"
+    app:layout_constraintStart_toStartOf="@+id/image_photo"
+    app:layout_constraintTop_toTopOf="@+id/image_photo" />
 
 </LinearLayout>

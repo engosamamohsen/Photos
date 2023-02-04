@@ -6,6 +6,6 @@
 
   <fragment
     android:id="@+id/photosFragment"
-    android:name="app.paymob.task.presentation.photo.PhotosFragment"
+    android:name="app.paymob.task.presentation.photo.ui.PhotosFragment"
     android:label="PhotosFragment" />
 </navigation>

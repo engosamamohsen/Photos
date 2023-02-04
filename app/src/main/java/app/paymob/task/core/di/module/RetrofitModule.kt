@@ -36,6 +36,8 @@ object RetrofitModule {
       request = request.newBuilder().url(
         request.url.newBuilder()
           .addQueryParameter("api_key", APIKEY)
+          .addQueryParameter("format", "json")
+          .addQueryParameter("nojsoncallback", "1")
           .build()
       ).build()
       chain.proceed(
