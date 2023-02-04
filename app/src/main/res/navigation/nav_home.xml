@@ -7,5 +7,21 @@
   <fragment
     android:id="@+id/photosFragment"
     android:name="app.paymob.task.presentation.photo.ui.PhotosFragment"
-    android:label="PhotosFragment" />
+    android:label="PhotosFragment" >
+    <action
+      android:id="@+id/action_photosFragment_to_photoFragment"
+      app:enterAnim="@anim/anim_slide_in_right"
+      app:exitAnim="@anim/anim_slide_out_left"
+      app:popEnterAnim="@anim/anim_slide_in_left"
+      app:popExitAnim="@anim/anim_slide_out_right"
+      app:destination="@id/photoFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/photoFragment"
+    android:name="app.paymob.task.presentation.photo.ui.PhotoFragment"
+    android:label="Photo Details" >
+    <argument
+      android:name="photo"
+      app:argType="app.paymob.task.domain.photos.entity.Photo" />
+  </fragment>
 </navigation>

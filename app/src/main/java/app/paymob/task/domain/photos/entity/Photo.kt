@@ -1,11 +1,14 @@
 package app.paymob.task.domain.photos.entity
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
 import com.google.gson.annotations.Expose
+import kotlinx.android.parcel.Parcelize
 
 @Keep
+@Parcelize
 data class Photo(
     @SerializedName("farm")
     @Expose
@@ -42,4 +45,4 @@ data class Photo(
     var title: String = "",
     @Transient
     var imageUrl:String = ""
-)
+) : Parcelable

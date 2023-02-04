@@ -36,14 +36,16 @@
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/PhotosRemoteDataSource.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/PhotosRemoteRepositoryImpl.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/PhotosServices.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/Photo.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/Photos.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/PhotosResponse.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/repository/PhotosRemoteRepository.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/usecase/PhotosUseCase.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/adapter/PhotosAdapter.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/event/PhotoUiEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/PhotoFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui_state/PhotoUIState.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/viewmodel/PhotosViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_photo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
@@ -219,6 +221,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/movie/repository/MovieLocalRepository.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/movie/repository/MovieRemoteRepository.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/movie/use_case/MovieUseCase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/Photo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/Photo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/utils/Converter.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/base/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/base/utils/Constants.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/home/list/adapter/CategoriesAdapter.kt" beforeDir="false" />
@@ -228,7 +231,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/home/list/viewModels/HomeViewModel.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/movie/ui/MovieFragment.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/movie/ui_state/MovieUIState.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/PhotosFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/PhotosFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/PhotosFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/PhotosFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photos.xml" afterDir="false" />
@@ -243,7 +246,6 @@
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/20220911_4795204063815889742.compiler.options" beforeDir="false" />
@@ -393,11 +395,11 @@
       <recent name="app.fawry.task.domain.category.repository" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="app.paymob.task.presentation.photo.ui_state" />
+      <recent name="app.paymob.task.presentation.photo.ui" />
       <recent name="app.paymob.task.data.photos" />
       <recent name="app.paymob.task.presentation.photo.event" />
       <recent name="app.paymob.task.presentation.photo.adapter" />
-      <recent name="app.paymob.task.domain.photos.repository" />
-      <recent name="app.paymob.task.domain.photos.usecase" />
     </key>
   </component>
   <component name="RunManager">

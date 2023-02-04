@@ -2,6 +2,7 @@ package app.paymob.task.presentation.photo.ui
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import app.paymob.task.domain.photos.entity.Photo
 import app.paymob.task.domain.utils.Resource
 import app.paymob.task.presentation.base.BaseFragment
@@ -31,7 +32,7 @@ class PhotosFragment : BaseFragment<FragmentPhotosBinding>() , PhotoUiEvent{
   override fun setupObservers() {
     super.setupObservers()
 
-    //listen for categories api
+    //listen for photos api
     lifecycleScope.launchWhenResumed {
       viewModel.photosResponse
         .collect {
@@ -55,7 +56,7 @@ class PhotosFragment : BaseFragment<FragmentPhotosBinding>() , PhotoUiEvent{
     }
   }
   override fun submitPhoto(photo: Photo) {
-
+    findNavController().navigate(PhotosFragmentDirections.actionPhotosFragmentToPhotoFragment(photo))
   }
 
 }
