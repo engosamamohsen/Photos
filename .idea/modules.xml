@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Task.iml" filepath="$PROJECT_DIR$/.idea/modules/Task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Task.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Task.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Task.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Task.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Task.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Task.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Task.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Task.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Task.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/Task.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Task.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Task.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Task.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Task.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.unitTest.iml" />
+    </modules>
+  </component>
+</project>
