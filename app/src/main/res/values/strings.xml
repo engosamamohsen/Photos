@@ -10,5 +10,7 @@
   <string name="cancel">Cancel</string>
   <string name="some_error">Some error occurred, try again later</string>
   <string name="release">Release Date:</string>
+    <string name="you_didn_t_accept_permission">You Didnt Accept Permission For Downloading Image</string>
+  <string name="failed_to_download_image">Failed To Download Image</string>
 
 </resources>

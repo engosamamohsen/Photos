@@ -8,9 +8,8 @@ import androidx.databinding.PropertyChangeRegistry
 open class BaseViewModel : ViewModel(), Observable {
   private val callbacks: PropertyChangeRegistry = PropertyChangeRegistry()
 
-  var dataLoadingEvent: SingleLiveEvent<Int> = SingleLiveEvent()
-  var clickEvent: SingleLiveEvent<Int> = SingleLiveEvent()
-  fun clickEvent(action: Int) {
+  var clickEvent: SingleLiveEvent<String> = SingleLiveEvent()
+  fun clickEvent(action: String) {
     clickEvent.value = action
   }
 

@@ -1,5 +1,8 @@
 package app.paymob.task.presentation.base.extensions
 
+import android.content.Context
+import android.content.pm.PackageManager
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import app.paymob.task.domain.utils.FailureStatus
 import app.paymob.task.domain.utils.Resource.Failure
@@ -35,3 +38,7 @@ fun Fragment.handleApiError(
 }
 
 fun Fragment.hideKeyboard() = hideSoftInput(requireActivity())
+
+fun Fragment.checkSelfPermissionGranted(permission: String): Boolean {
+  return ContextCompat.checkSelfPermission(requireContext(), permission) == PackageManager.PERMISSION_GRANTED
+}
