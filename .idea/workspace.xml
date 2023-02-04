@@ -33,11 +33,15 @@
       <change afterPath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.main.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Task.prettyPopUp.unitTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/PhotosRemoteDataSource.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/PhotosRemoteRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/core/room/AppDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/core/room/RoomModule.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/PhotosServices.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/data_source/local/PhotoDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/data_source/local/PhotoLocalDataSource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/repository/PhotoLocalRepositoryImpl.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/Photos.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/PhotosResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/repository/PhotoLocalRepository.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/repository/PhotosRemoteRepository.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/usecase/PhotosUseCase.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/adapter/PhotosAdapter.kt" afterDir="false" />
@@ -56,6 +60,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
@@ -211,6 +218,8 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/movie/data_source/remote/MovieRemoteDataSource.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/movie/repository/MovieLocalRepositoryImpl.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/movie/repository/MovieRemoteRepositoryImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/PhotosRemoteDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/data_source/remote/PhotosRemoteDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/PhotosRemoteRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/data/photos/repository/PhotosRemoteRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/category/entity/Category.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/category/entity/CategoryResponse.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/category/repository/CategoryLocalRepository.kt" beforeDir="false" />
@@ -388,18 +397,18 @@
       <recent name="C:\Users\20115\Desktop\projects\fawry\app\src\main\res\layout" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="app.paymob.task.data.photos.data_source.remote" />
+      <recent name="app.paymob.task.data.photos.repository" />
       <recent name="app.paymob.task.presentation.photo.viewmodel" />
       <recent name="app.paymob.task.presentation.photo.ui" />
       <recent name="app.paymob.task.domain.photos.entity" />
-      <recent name="app.paymob.task.presentation.photo" />
-      <recent name="app.fawry.task.domain.category.repository" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="app.paymob.task.domain.photos.repository" />
+      <recent name="app.paymob.task.data.photos.data_source.local" />
+      <recent name="app.paymob.task.data.photos.repository" />
+      <recent name="app.paymob.task.core.room" />
       <recent name="app.paymob.task.presentation.photo.ui_state" />
-      <recent name="app.paymob.task.presentation.photo.ui" />
-      <recent name="app.paymob.task.data.photos" />
-      <recent name="app.paymob.task.presentation.photo.event" />
-      <recent name="app.paymob.task.presentation.photo.adapter" />
     </key>
   </component>
   <component name="RunManager">

@@ -1,5 +1,6 @@
-package app.paymob.task.data.photos
+package app.paymob.task.data.photos.data_source.remote
 
+import app.paymob.task.data.photos.PhotosServices
 import app.paymob.task.data.remote.BaseRemoteDataSource
 import javax.inject.Inject
 

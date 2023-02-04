@@ -1,7 +1,7 @@
 package app.paymob.task.core.di.module
 
-import app.paymob.task.data.photos.PhotosRemoteDataSource
-import app.paymob.task.data.photos.PhotosRemoteRepositoryImpl
+import app.paymob.task.data.photos.data_source.remote.PhotosRemoteDataSource
+import app.paymob.task.data.photos.repository.PhotosRemoteRepositoryImpl
 import app.paymob.task.domain.photos.repository.PhotosRemoteRepository
 import dagger.Module
 import dagger.Provides
