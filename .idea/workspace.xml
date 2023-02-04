@@ -6,7 +6,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="isExistInFavourite" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -45,8 +44,11 @@
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/usecase/PhotosUseCase.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/adapter/PhotosAdapter.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/event/PhotoUiEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/FavouriteFragment.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui_state/PhotoUIState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_photo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/viewmodel/FavouriteViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_favourite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/main_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -174,6 +176,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_31.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_4_31.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_4_31.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/Fawry.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/Fawry.app.androidTest.iml" beforeDir="false" />
@@ -228,6 +231,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/movie/use_case/MovieUseCase.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/Photo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/photos/entity/Photo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/domain/utils/Converter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/base/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/base/HomeActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/home/list/adapter/CategoriesAdapter.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/home/list/adapter/MoviesAdapter.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/home/list/event/MovieUiEvent.kt" beforeDir="false" />
@@ -238,12 +242,6 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/PhotoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/PhotoFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/PhotosFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/ui/PhotosFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/viewmodel/PhotoViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/paymob/task/presentation/photo/viewmodel/PhotoViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_category.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_movie.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/progress_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/progress_dialog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
@@ -343,9 +341,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
-        <option value="resourceFile" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -379,7 +377,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -388,8 +386,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\20115\Desktop\projects\Task\app\src\main\res\xml" />
       <recent name="C:\Users\20115\Desktop\projects\Task\app\src\main\res\layout" />
+      <recent name="C:\Users\20115\Desktop\projects\Task\app\src\main\res\xml" />
       <recent name="C:\Users\20115\Desktop\projects\fawry\app\src\main\java\app\fawry\task\core\di\room" />
       <recent name="C:\Users\20115\Desktop\projects\fawry\app\src\main\res\layout" />
     </key>
@@ -402,10 +400,10 @@
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="app.paymob.task.presentation.photo.viewmodel" />
+      <recent name="app.paymob.task.presentation.photo.ui" />
       <recent name="app.paymob.task.domain.photos.repository" />
       <recent name="app.paymob.task.data.photos.data_source.local" />
       <recent name="app.paymob.task.data.photos.repository" />
-      <recent name="app.paymob.task.core.room" />
     </key>
   </component>
   <component name="RunManager">

@@ -1,6 +1,11 @@
 package app.paymob.task.presentation.base
 
+import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.*
@@ -34,6 +39,22 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 
   override fun onSupportNavigateUp(): Boolean {
     onBackPressed()
+    return true
+  }
+
+  override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    val inflater: MenuInflater = menuInflater
+    inflater.inflate(R.menu.main_menu, menu)
+    return true
+  }
+
+  override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    when(item.itemId){
+     R.id.action_favourite -> {
+       if(nav.currentDestination?.id != R.id.favouriteFragment) nav.navigate(R.id.favouriteFragment)
+     }
+     else -> {}
+    }
     return true
   }
 

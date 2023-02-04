@@ -24,4 +24,16 @@
       android:name="photo"
       app:argType="app.paymob.task.domain.photos.entity.Photo" />
   </fragment>
+  <fragment
+    android:id="@+id/favouriteFragment"
+    android:name="app.paymob.task.presentation.photo.ui.FavouriteFragment"
+    android:label="Favourite" >
+    <action
+      android:id="@+id/action_favouriteFragment_to_photoFragment"
+      app:enterAnim="@anim/anim_slide_in_right"
+      app:exitAnim="@anim/anim_slide_out_left"
+      app:popEnterAnim="@anim/anim_slide_in_left"
+      app:popExitAnim="@anim/anim_slide_out_right"
+      app:destination="@id/photoFragment" />
+  </fragment>
 </navigation>
