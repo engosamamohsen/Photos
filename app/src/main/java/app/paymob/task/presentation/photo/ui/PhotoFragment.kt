@@ -32,6 +32,8 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding>(){
   fun setBindingVariables() {
     //represent photo to ui using UI-State
     binding.photo = PhotoUIState(args.photo)
+    //set photo into viewModel
+    viewModel.setPhotoModel(args.photo)
     //set ui to viewModel
     binding.viewModel = viewModel
   }
@@ -47,35 +49,38 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding>(){
     }
   }
 
+  //download image as bitmap to save into internal storage
   private fun downloadImage() {
-    binding.progress.show()
+    binding.progress.show()//show progress if image is big size
     Glide.with(this)
       .asBitmap()
       .load(args.photo.imageUrl)
       .into(object : CustomTarget<Bitmap>(){
 
         override fun onLoadCleared(placeholder: Drawable?) {
-          binding.progress.hide()
-          showMessage(requireContext(),getString(R.string.failed_to_download_image))
+          binding.progress.hide()//hide progress
         }
 
         override fun onResourceReady(
           resource: Bitmap,
           transition: com.bumptech.glide.request.transition.Transition<in Bitmap>?
         ) {
+          //successfully fetch bitmap , try to save bitmap into internal storage
           savePhotoInInternalStorage(resource)
         }
       })
   }
 
+  //save bitmap into internal storage
   private fun savePhotoInInternalStorage(bmp: Bitmap) : Boolean{
     return try{
       requireActivity().openFileOutput("${args.photo.server}_${args.photo.id}.jpg",
         Context.MODE_PRIVATE).use { stream ->
+        //compress my bitmap image
         if(!bmp.compress(Bitmap.CompressFormat.JPEG,100,stream)){
           binding.progress.hide()
           showMessage(requireContext(),getString(R.string.failed_to_download_image))
-          throw IOException("Couldnt save bitmap")
+          throw IOException("Couldn't save bitmap")
         }
       }
       showMessage(requireContext(),"your image had been downloaded successfully")

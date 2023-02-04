@@ -12,6 +12,11 @@ class PhotoLocalDataSource @Inject constructor(private val dao: PhotoDao) :
   suspend fun insert(list: List<Photo>) = safeApiCall {
     dao.insert(list)
   }
+  suspend fun remove(photoId: String) = safeApiCall {
+    dao.remove(photoId)
+  }
+
+  fun exists(photoId: String) = dao.exists(photoId)
 
 
 }
