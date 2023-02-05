@@ -9,5 +9,6 @@
   <string name="release">تاريخ الإنتاج: </string>
     <string name="you_didn_t_accept_permission">You Didnt Accept Permission For Downloading Image</string>
   <string name="failed_to_download_image">Failed To Download Image</string>
+  <string name="search">Search</string>
 
 </resources>

@@ -15,29 +15,20 @@ import javax.inject.Inject
 
 class PhotosAdapter @Inject constructor() : RecyclerView.Adapter<PhotosAdapter.ViewHolder>() {
   lateinit var photoUiEvent: PhotoUiEvent
-  private val differCallback = object : DiffUtil.ItemCallback<Photo>() {
-    override fun areItemsTheSame(oldItem: Photo, newItem: Photo): Boolean {
-      return oldItem.id == newItem.id
-    }
-
-    override fun areContentsTheSame(oldItem: Photo, newItem: Photo): Boolean {
-      return oldItem == newItem
-    }
-  }
-  val differ = AsyncListDiffer(this, differCallback)
+  var list = ArrayList<Photo>()
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
     val view = LayoutInflater.from(parent.context).inflate(R.layout.item_photo, parent, false)
     return ViewHolder(view)
   }
 
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-    val data = differ.currentList[position]
+    val data = list[position]
     holder.itemLayoutBinding.photo = data
     if(this::photoUiEvent.isInitialized) holder.itemLayoutBinding.photoUiEvent = photoUiEvent
   }
 
   override fun getItemCount(): Int {
-    return differ.currentList.size
+    return list.size
   }
 
   override fun onViewAttachedToWindow(holder: ViewHolder) {
@@ -51,9 +42,9 @@ class PhotosAdapter @Inject constructor() : RecyclerView.Adapter<PhotosAdapter.V
   }
 
   fun update(photos: List<Photo>) {
-    differ.submitList(photos)
-    notifyItemRangeInserted(0,differ.currentList.size)
-
+    list.clear()
+    list.addAll(photos)
+    notifyDataSetChanged()
   }
 
   inner class ViewHolder(itemView: View) :

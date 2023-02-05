@@ -1,5 +1,6 @@
 package app.paymob.task.presentation.photo.viewmodel
 
+import android.util.Log
 import androidx.databinding.Bindable
 import androidx.lifecycle.viewModelScope
 import app.paymob.task.domain.photos.entity.Photo
@@ -19,6 +20,8 @@ import javax.inject.Inject
 class PhotosViewModel @Inject constructor(
   private val useCase: PhotosUseCase,
 ) : BaseViewModel() {
+  /**collect photos to reset search**/
+  val photos = arrayListOf<Photo>()
 
   /** collect photos api for listening in fragment **/
   val photosResponse = MutableStateFlow<Resource<PhotosResponse>>(Resource.Default)
@@ -38,12 +41,28 @@ class PhotosViewModel @Inject constructor(
     }.launchIn(viewModelScope)
   }
 
+  //collect photos from remote-photos
+  fun setAllList(photos: List<Photo>) {
+    this.photos.addAll(photos)
+  }
+
   /**update data in photos adapter**/
-  fun setData(photos: Photos) {
-    adapter.update(photos.photo)
+  fun setData(photos: List<Photo>) {
+    adapter.update(photos)
     notifyPropertyChanged(BR.adapter)
   }
 
+  val searchList = arrayListOf<Photo>()
+  fun search(text: String) {
+    viewModelScope.launch {
+      searchList.clear()
+      photos.forEach {
+        if (it.title.contains(text))
+          searchList.add(it)
+      }
+      adapter.update(searchList)
+    }
+  }
 
 
 }
