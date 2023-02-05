@@ -1,4 +1,4 @@
-# Movies List (Kotlin - MVVM - Hilt - Retrofit - Room - Work Manager)
+# Photos List (Kotlin - MVVM - Hilt - Retrofit - Room - Internal storage)
 
 The app is composed of 3 screens,
 - first is the to show image with search
