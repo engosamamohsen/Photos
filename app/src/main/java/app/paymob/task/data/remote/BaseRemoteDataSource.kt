@@ -1,5 +1,6 @@
 package app.paymob.task.data.remote
 
+import app.paymob.task.domain.photos.entity.PhotosResponse
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import app.paymob.task.domain.utils.ErrorResponse
@@ -17,7 +18,10 @@ open class BaseRemoteDataSource @Inject constructor() {
     println(apiCall)
     try {
       val apiResponse = apiCall.invoke()
-      return Resource.Success(apiResponse)
+      if(apiResponse is PhotosResponse && (apiResponse as PhotosResponse).stat == "ok")
+        return Resource.Success(apiResponse)
+      else
+        return Resource.Failure(FailureStatus.API_FAIL, 401, (apiResponse as PhotosResponse).message)
     } catch (throwable: Throwable) {
       when (throwable) {
         is HttpException -> {

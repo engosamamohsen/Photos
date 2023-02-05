@@ -8,9 +8,12 @@ import com.google.gson.annotations.Expose
 @Keep
 data class PhotosResponse(
   @SerializedName("photos")
-    @Expose
-    var photos: Photos = Photos(),
+  @Expose
+  var photos: Photos = Photos(),
   @SerializedName("stat")
-    @Expose
-    var stat: String = ""
+  @Expose
+  var stat: String = "",
+  @SerializedName("message")
+  @Expose
+  var message: String = ""
 )

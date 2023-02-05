@@ -2,6 +2,7 @@ package app.paymob.task.presentation.photo.ui
 
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import androidx.fragment.app.viewModels
@@ -13,6 +14,7 @@ import app.paymob.task.presentation.base.BaseFragment
 import app.paymob.task.presentation.base.extensions.handleApiError
 import app.paymob.task.presentation.base.extensions.hideKeyboard
 import app.paymob.task.presentation.base.extensions.setUpAdapter
+import app.paymob.task.presentation.base.utils.showMessage
 import app.paymob.task.presentation.photo.event.PhotoUiEvent
 import app.paymob.task.presentation.photo.viewmodel.PhotosViewModel
 import com.structure.base_mvvm.R
@@ -84,6 +86,7 @@ class PhotosFragment : BaseFragment<FragmentPhotosBinding>() , PhotoUiEvent{
             }
             is Resource.Success -> {
               hideLoading()
+
               //saving photos
               viewModel.setAllList(it.value.photos.photo)
               //update photos in adapter
